@@ -67,6 +67,66 @@ Things you may want to cover:
 コメント機能
 
 # データベース設計
+# テーブル設計
+## users
+|Column                  |Type    |Options                 |
+| ---------------------- | ------ | ---------------------- |
+|nickname                |string  |null: false             |
+|email                   |string  |null: false,unique: true|
+|encrypted_password      |string  |null: false             |
+|age                     |integer |null: false             |
+|region_id               |integer |null: false             |
+|gender_id               |integer |null: false             |
+|last_name               |string  |null: false             |
+|first_name              |string  |null: false             |
+|last_name_kana          |string  |null: false             |
+|first_name_kana         |string  |null: false             |
+|birthday                |date    |null: false             |
+
+### Association
+has_many :orders
+
+## items
+|Column                |Type      |Options                      |
+| ----------           | ----     | --------------------------- |
+|item_name             |string    |null: false                  |
+|explanation           |text      |null: false                  |
+|category_id           |integer   |null: false                  |
+|state_id              |integer   |null: false                  |
+|region_id             |integer   |null: false                  |
+|scheduled_delivery_id |integer   |null: false                  |
+|shopping_fee_id       |integer   |null: false                  |
+|user                  |references|null: false,foreign_key: true|
+|price                 |integer   |null: false                  |
+
+
+
+### Association
+has_one :order
+belongs_to :user 
+
+## orders
+|Column         |Type      |Options                      |
+| ------------- | ------   | --------------------------- |
+|item           |references|null: false,foreign_key: true|
+|user           |references|null: false,foreign_key: true|
+### Association
+belongs_to :item
+belongs_to :user
+has_one :place
+
+## places
+|Column         |Type      |Options                      |
+| ------------- | ------   | ---------                   |
+|postcode       |string    |null: false                  |
+|region_id      |integer   |null: false                  |
+|municipalities |string    |null: false                  |
+|address        |string    |null: false                  |
+|building       |string    |                             |
+|tell           |string    |null: false                  |
+|order          |references|null: false,foreign_key: true|
+### Association
+belongs_to :order
 # 画面遷移図
 # 開発環境
   ・フロントエンド
