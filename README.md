@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 # アプリケーション名
-  大人の娯楽　お酒の勧め
+  大人の娯楽/お酒の勧め　その他検討中
 
 # アプリケーション概要
   お酒の種類別・作り方・地域別・度数や気分に応じた検索を可能にし、販売と購入・いいね・コメント機能にて、お酒のコミュニティの拡大を図る
@@ -48,7 +48,7 @@ Things you may want to cover:
     2.気に入ったものがあれば、会社のフォロー・お気に入り・コメントを投稿する
 
 # アプリケーションを作成した背景
-  学生アルバイト時代に、お酒の作り方が覚えられず、何の種類なのかなども説明できるまで時間がかかった。
+  学生アルバイト時代に、お酒の作り方が覚えられず、何の種類なのかなども説明できるまで時間がかかった。同じ経験をされている新成人の方などもいるのではないかと考えた。
   世の中には、いろんなお酒があり、苦手な人でも美味しく飲めるお酒があること、お酒を好む人同士のコミュニティを作りたいと思った。
   同時に販売購入ができれば、一つのサイトの中で、購入者は簡単に気になった商品を取得でき、販売者はお酒を世に広めることができると考えた。
 
@@ -66,7 +66,7 @@ Things you may want to cover:
 いいね
 コメント機能
 
-# データベース設計
+
 # テーブル設計
 ## users
 |Column                  |Type    |Options                 |
@@ -85,6 +85,7 @@ Things you may want to cover:
 
 ### Association
 has_many :orders
+has_many :comments
 
 ## items
 |Column                |Type      |Options                      |
@@ -99,17 +100,32 @@ has_many :orders
 |user                  |references|null: false,foreign_key: true|
 |price                 |integer   |null: false                  |
 
+### Association
+has_many :orders
+belongs_to :company
+has_many :comments
 
+
+## company
+|Column             |Type      |Options                      |
+| -------------    | ------   | ---------                   |
+|company_name      |string    |null: false                  |
+|email             |string    |null: false                  |
+|encrypted_password|string    |null: false                  |
+|region_id         |integer   |null: false                  |?
+|text              |text      |null: false,foreign_key: true|?
 
 ### Association
-has_one :order
-belongs_to :user 
+has_many :orders
+has_many :comments
+has_many :items
 
 ## orders
 |Column         |Type      |Options                      |
 | ------------- | ------   | --------------------------- |
 |item           |references|null: false,foreign_key: true|
 |user           |references|null: false,foreign_key: true|
+
 ### Association
 belongs_to :item
 belongs_to :user
@@ -127,7 +143,34 @@ has_one :place
 |order          |references|null: false,foreign_key: true|
 ### Association
 belongs_to :order
+
+## comments
+|Column         |Type      |Options                      |
+| ------------- | ------   | ---------                   |
+|lank_id        |integer   |null: false                  |
+|comment        |text      |null: false                  |
+|user_id        |references|null: false,foreign_key: true|
+|item_id        |references|null: false,foreign_key: true|
+
+### Association
+belongs_to :user
+belongs_to :company
+belongs_to :item
+
+## favorities
+|Column         |Type      |Options                      |
+| ------------- | ------   | ---------                   |
+|user_id        |references|null: false,foreign_key: true|
+|item_id        |references|null: false,foreign_key: true|
+
+### Association
+belongs_to :user
+belongs_to :company
+belongs_to :item
 # 画面遷移図
+https://gyazo.com/615c3a12e51152e3b5c19fb1cc8cddda
+
+
 # 開発環境
   ・フロントエンド
   ・バックエンド
