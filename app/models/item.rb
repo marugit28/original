@@ -6,8 +6,9 @@ class Item < ApplicationRecord
   belongs_to :region
   belongs_to :category
   belongs_to :scheduled_delivery
-  belongs_to :Atmosphere
+  belongs_to :atmosphere
   belongs_to :user
+  belongs_to :degree
 
   validates :image,                           presence: true, unless: :was_attached?
   validates :itemname,                       presence: true

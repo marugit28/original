@@ -1,6 +1,11 @@
 class ItemsController < ApplicationController
-  # def index
-  # end
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit]
+
+
+  def index
+    @items = Item.all
+  end
 
   def new
     @item = Item.new
@@ -15,10 +20,39 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def edit
+    unless user_signed_in? && current_user.id == @item.user_id
+      redirect_to action: :index
+      end
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to item_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if user_signed_in? && current_user.id == @item.user_id
+      @item.destroy
+    end
+    redirect_to root_path
+  end
+
+
 private
 
 def item_params
   params.require(:item).permit(:image, :itemname, :explanation, :category_id, :degree_id, :region_id, :scheduled_delivery_id,
     :atmosphere_id, :price).merge(user_id: current_user.id)
+end
+
+def set_item
+  @item = Item.find(params[:id])
 end
 end

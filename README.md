@@ -90,7 +90,7 @@ has_many :comments
 ## items
 |Column                |Type      |Options                      |
 | ----------           | ----     | --------------------------- |
-|item_name             |string    |null: false                  |
+|itemname              |string    |null: false                  |
 |explanation           |text      |null: false                  |
 |category_id           |integer   |null: false                  |
 |region_id             |integer   |null: false                  |
