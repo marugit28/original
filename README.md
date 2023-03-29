@@ -93,10 +93,8 @@ has_many :comments
 |item_name             |string    |null: false                  |
 |explanation           |text      |null: false                  |
 |category_id           |integer   |null: false                  |
-|state_id              |integer   |null: false                  |
 |region_id             |integer   |null: false                  |
 |scheduled_delivery_id |integer   |null: false                  |
-|shopping_fee_id       |integer   |null: false                  |
 |user                  |references|null: false,foreign_key: true|
 |price                 |integer   |null: false                  |
 
