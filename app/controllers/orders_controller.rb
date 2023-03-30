@@ -7,18 +7,18 @@ class OrdersController < ApplicationController
       redirect_to root_path
     end
 
-    # if @item.order.present? 
-    #   unless current_user.id == @item.user_id
-    #   redirect_to root_path 
-    #   end
-    # end
+    if @item.orders.present? 
+      unless current_user.id == @item.user_id
+      redirect_to root_path 
+      end
+    end
   end
 
   def create
     @order_place = OrderPlace.new(order_params)
     if 
-    # @order_place.valid?
-    #   pay_item
+    @order_place.valid?
+      pay_item
       @order_place.save
       redirect_to root_path
     else
