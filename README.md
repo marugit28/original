@@ -93,8 +93,10 @@ has_many :comments
 |itemname              |string    |null: false                  |
 |explanation           |text      |null: false                  |
 |category_id           |integer   |null: false                  |
+|degree_id             |integer   |null: false                  |
 |region_id             |integer   |null: false                  |
 |scheduled_delivery_id |integer   |null: false                  |
+|atmosphere_id         |intger    |null: false                  |
 |user                  |references|null: false,foreign_key: true|
 |price                 |integer   |null: false                  |
 
@@ -111,7 +113,7 @@ has_many :comments
 |email             |string    |null: false                  |
 |encrypted_password|string    |null: false                  |
 |region_id         |integer   |null: false                  |?
-|text              |text      |null: false,foreign_key: true|?
+|explanation      |text      |null: false,foreign_key: true|?
 
 ### Association
 has_many :orders
@@ -134,7 +136,7 @@ has_one :place
 | ------------- | ------   | ---------                   |
 |postcode       |string    |null: false                  |
 |region_id      |integer   |null: false                  |
-|municipalities |string    |null: false                  |
+|municipality   |string    |null: false                  |
 |address        |string    |null: false                  |
 |building       |string    |                             |
 |tell           |string    |null: false                  |
