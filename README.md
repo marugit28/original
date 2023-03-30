@@ -74,9 +74,9 @@ Things you may want to cover:
 |nickname                |string  |null: false             |
 |email                   |string  |null: false,unique: true|
 |encrypted_password      |string  |null: false             |
-|age                     |integer |null: false             |
+<!-- |age                     |integer |null: false             | -->
 |region_id               |integer |null: false             |
-|gender_id               |integer |null: false             |
+<!-- |gender_id               |integer |null: false             | -->
 |last_name               |string  |null: false             |
 |first_name              |string  |null: false             |
 |last_name_kana          |string  |null: false             |
