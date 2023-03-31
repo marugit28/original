@@ -75,9 +75,9 @@ RSpec.describe OrderPlace, type: :model do
         expect(@order_place.errors.full_messages).to include('Tell is invalid')
       end
       it 'tokenが空では登録できないこと' do
-        # @order_place.token = nil
-        # @order_place.valid?
-        # expect(@order_place.errors.full_messages).to include("Tokenを入力してください")
+        @order_place.token = nil
+        @order_place.valid?
+        expect(@order_place.errors.full_messages).to include("Token can't be blank")
       end
     end
   end

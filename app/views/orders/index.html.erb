@@ -36,14 +36,14 @@
           <label class="form-text">カード情報</label>
           <span class="indispensable">必須</span>
         </div>
-<div class="input-default PayjpElement PayjpElement--empty" id="card-number"><iframe name="_payjpElements1_cardNumber" title="Secure payment input frame" scrolling="no" allow="payment" allowtransparency="true" src="https://js.pay.jp/v2/iframe.1676033665418.html#locale=ja&amp;origin=http%3A%2F%2Flocalhost%3A3000&amp;componentName=cardNumber&amp;controllerName=_payjpController1&amp;groupId=Elements1&amp;ltr=true&amp;&amp;disabled=false&amp;placeholder=null&amp;hideIcon=false" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; user-select: none !important; transform: translate(0px) !important; height: 19.2px;"></iframe></div>
-        <div class="input-default PayjpElement PayjpElement--empty" id="card-number" > 
-        <div class='available-card'>
+    
+        <div id="card-number" class="input-default"> 
+        <%# <div class='available-card'>
           <%= image_tag 'card-visa.gif', class: 'card-logo'%>
-          <%= image_tag 'card-mastercard.gif', class: 'card-logo'%>
-          <%= image_tag 'card-jcb.gif', class: 'card-logo'%>
-          <%= image_tag 'card-amex.gif', class: 'card-logo'%>
-        </div>
+          <%# <%= image_tag 'card-mastercard.gif', class: 'card-logo'%>
+          <%# <%= image_tag 'card-jcb.gif', class: 'card-logo'%>
+          <%# <%= image_tag 'card-amex.gif', class: 'card-logo'%>
+        <%# </div> %> 
         </div>
       </div>
       <div class="form-group">
@@ -52,7 +52,7 @@
           <span class="indispensable">必須</span>
         </div>
         <div class='input-expiration-date-wrap'>
-          <div class="input-expiration-date" id="card-exp-month"></div>
+          <div id="card-exp-month" class="input-expiration-date"></div>
         </div>
       </div>
       <div class="form-group">
@@ -60,8 +60,7 @@
           <label class="form-text">セキュリティコード</label>
           <span class="indispensable">必須</span>
         </div>
-        <div class="input-default PayjpElement PayjpElement--empty" id="card-cvc" %=""><iframe name="_payjpElements1_cardCvc" title="Secure payment input frame" scrolling="no" allow="payment" allowtransparency="true" src="https://js.pay.jp/v2/iframe.1676033665418.html#locale=ja&amp;origin=http%3A%2F%2Flocalhost%3A3000&amp;componentName=cardCvc&amp;controllerName=_payjpController1&amp;groupId=Elements1&amp;ltr=true&amp;&amp;disabled=false&amp;placeholder=null&amp;hideIcon=false" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; user-select: none !important; transform: translate(0px) !important; height: 19.2px;"></iframe></div>
-        <div class="input-default" id="card-cvc"%></div>
+        <div id="card-cvc" class="input-default"></div>
       </div>
     </div>
    <%= form_with url:item_orders_path(@item.id), method: :post, id: 'charge-form',model:@order_place, class: 'transaction-form-wrap',local: true do |f| %> 
