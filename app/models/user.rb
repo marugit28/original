@@ -9,6 +9,7 @@ class User < ApplicationRecord
   belongs_to :region
   has_many :items
   has_many :orders
+  has_many :comments
   
   validates :nickname, presence: true
   validates :email,    presence: true

@@ -1,8 +1,8 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :user
   has_one_attached :image
   has_many :orders
+  has_many :comments
 
   belongs_to :region
   belongs_to :category
@@ -10,6 +10,7 @@ class Item < ApplicationRecord
   belongs_to :atmosphere
   belongs_to :user
   belongs_to :degree
+  belongs_to :lank
 
   validates :image,                           presence: true, unless: :was_attached?
   validates :itemname,                       presence: true
