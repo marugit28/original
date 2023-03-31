@@ -31,10 +31,10 @@ Things you may want to cover:
 
 # URL ※
 # テスト用アカウント
-  ・Basic認証パスワード
-  ・Basic認証ID
-  ・メールアドレス
-  ・パスワード
+  ・Basic認証パスワード: admin
+  ・Basic認証ID : 2222
+  ・メールアドレス :aaa@docomo.ne.jp
+  ・パスワード :ty594rm2q
 
 # 利用方法
   お酒の投稿
@@ -46,14 +46,17 @@ Things you may want to cover:
 
     1.一覧ページやカテゴリ検索から商品をクリックして、お酒の詳細を確認する
     2.気に入ったものがあれば、会社のフォロー・お気に入り・コメントを投稿する
+    3.購入できる
 
 # アプリケーションを作成した背景
   学生アルバイト時代に、お酒の作り方が覚えられず、何の種類なのかなども説明できるまで時間がかかった。同じ経験をされている新成人の方などもいるのではないかと考えた。
-  世の中には、いろんなお酒があり、苦手な人でも美味しく飲めるお酒があること、お酒を好む人同士のコミュニティを作りたいと思った。
+  世の中には、いろんなお酒があり、苦手な人でも美味しく飲めるお酒があること、ご当地などあまり知られていないお酒があることから、いろいろなお酒を検索できるようにしたいとと考えた。
+  お酒を好む人同士のコミュニティができると、趣向の近い商品を探しやすくなると考えた。
   同時に販売購入ができれば、一つのサイトの中で、購入者は簡単に気になった商品を取得でき、販売者はお酒を世に広めることができると考えた。
 
 # 洗い出した要件
-  要件を定義したシート
+  https://docs.google.com/spreadsheets/d/1n2N3016WCC5XFG8A7y6o-Gw18YdkNlXrnL6ZNUWUsuI/edit#gid=1785908763
+
 
 # 実装した機能についての画像やGIFおよびその説明 ※
 
@@ -65,6 +68,7 @@ Things you may want to cover:
 クレジットカード
 いいね
 コメント機能
+お気に入り
 
 
 # テーブル設計
@@ -74,9 +78,9 @@ Things you may want to cover:
 |nickname                |string  |null: false             |
 |email                   |string  |null: false,unique: true|
 |encrypted_password      |string  |null: false             |
-<!-- |age                     |integer |null: false             | -->
+|age                     |integer |null: false             | 
 |region_id               |integer |null: false             |
-<!-- |gender_id               |integer |null: false             | -->
+|gender_id               |integer |null: false             | 
 |last_name               |string  |null: false             |
 |first_name              |string  |null: false             |
 |last_name_kana          |string  |null: false             |

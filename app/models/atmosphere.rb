@@ -9,7 +9,8 @@ class Atmosphere < ActiveHash::Base
     { id: 7, name: 'バー' },
     { id: 8, name: '高級' },
     { id: 9, name: 'コスパ' },
-    { id: 10, name: 'その他' }
+    { id: 10, name: '一人でしっぽり' },
+    { id: 11, name: 'その他' }
 
   ]
 
