@@ -1,12 +1,15 @@
+
+
 .transaction-contents {
   width: 100vw;
-  background-color: #f5f5f5;
+  background-color: #523937  ;
   display: flex;
   justify-content: center;
 }
 
+
 .transaction-main {
-  background-color: #FFF;
+  background-color: #9A7C7A;
   width: 70vw;
   min-width: 450px;
   padding: 10vh 10vw;
@@ -148,8 +151,8 @@
 
 .buy-red-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: #4e0b08;
+  border: 1px solid #4e0b08;
   color: #fff;
   line-height: 48px;
   font-size: 14px;

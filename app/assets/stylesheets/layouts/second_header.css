@@ -29,26 +29,28 @@
   width: 185px;
   height: 49px;
   text-decoration: none;
-  color: #333333;
+  color: #bfb6b6;
+  font-size: 25px;
+
 }
 .lists-right {
   display: flex;
   list-style: none;
-  align-items: flex-end;
+  align-items: center;
 }
 
 
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color: #9A7C7A;
+  color: #a39c9b;
   font-weight: bold;
 }
 
 
 .logout {
   text-decoration: none;
-  color: #333333;
+  color: #6c6c6c;
 }
 
 .login {

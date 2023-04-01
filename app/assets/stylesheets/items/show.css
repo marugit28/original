@@ -2,7 +2,6 @@
 
 .item-show {
   background-color: #523937;
-  /* 9A7C7A */
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -99,8 +98,8 @@
 
 .detail-item {
   width: 20%;
-  background-color: #eee;
-  border: 1px solid #dedede;
+  background-color: #d7cccc;
+  border: 1px solid #cebcbc;
   font-size: 14px;
   text-align: center;
 }
@@ -108,7 +107,7 @@
 .detail-value {
   width: 80%;
   padding: 20px;
-  border: 1px solid #dedede;
+  border: 1px solid #d0c3c3;
   font-size: 14px;
 }
 
@@ -141,13 +140,11 @@
   width: 60vw;
   background-color: #9A7C7A;
   margin: 5vh 0;
-  text-align: center;
   opacity: 80%;
 
 }
 
 .comment-ran{
-  justify-content: center;
   width: 60vw;
   background-color: #9A7C7A;
   margin: 5vh 0;
@@ -167,7 +164,7 @@
   width: 90%;
   height: 100px;
   padding: 10px;
-  margin: 10px 20px;
+  margin: 10px 20px 10px 20px;
   border: solid 2px #dedede;
   resize: none;
 }

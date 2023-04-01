@@ -2,7 +2,8 @@
   width: 100%;
   min-width: 800px;
   height: 100%;
-  background-color: #f5f5f5;
+  min-height: 1700px;
+  background-color: #5a4a4a;
   display: flex;
   justify-content: center;
 }
@@ -10,7 +11,7 @@
 /* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
   width: 50%;
-  background-color: white;
+  background-color: rgb(176, 170, 170);
   padding-bottom: 70px;
 }
 
@@ -144,8 +145,8 @@
 
 .register-red-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: #920d33;
+  border: 1px solid #931035;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
@@ -154,7 +155,7 @@
 
 .register-info {
   margin: 30px 180px 0 0;
-  color: #0099e8;
+  color: #cd1398;
   text-align: right;
   cursor: pointer;
 }

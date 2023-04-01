@@ -3,237 +3,116 @@ a {
 }
 
 .main {
-  background: #FFF;
+  background-color: #572e2e;
+  display: block;
+  z-index: 19;
+
 }
-
-/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
-.title-contents {
-  width: 100vw;
-  background-image: image-url('furima-header01.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-}
-
-.service-title {
-  font-size: 8vh;
-}
-
-.service-explain {
-  font-size: 2.5vh;
-  line-height: 40px;
-}
-
-.store-btn {
-  display: flex;
-  margin-top: 24px;
-}
-
-.apple-btn {
-  margin-right: 1vw;
-  height: 9vh;
-}
-
-.google-btn {
-  height: 9vh;
-}
-
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
-
-/* FURIMAが選ばれる3つの理由部分 */
-.select-reason-contents {
-  padding: 5vh 15vw;
-}
-
-.select-reason-contents>.title {
-  text-align: center;
-  font-size: 3.5vh;
-  font-weight: bold;
-  margin-bottom: 5vh;
-  position: relative;
-}
-
-.select-reason-contents>.title::after {
-  content: '';
-  width: 70px;
-  height: 4px;
-  background-color: #3ccace;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.reason-lists {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.reason-lists>.list {
-  width: 33vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.list-pict {
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.reason-list-number {
+/* スライダー画像 */
+.slider{
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
-  font-size: 30px;
-  text-align: center;
-  line-height: 60px;
-  background-color: #3ccace;
-  color: #fff;
+  overflow: hidden;
+  width: 100%;
+  block-size: 600px;
+  overflow-y: scroll; /* 縦方向にスクロール可能にする */
+
+
 }
-
-.reason-list-text {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 50px;
-}
-
-.reason-list-blue-text {
-  color: #3ccace;
-}
-
-.reason-list-description {
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-/* //FURIMAが選ばれる3つの理由部分 */
-
-
-/* 画面中央の「会員数日本一位」帯部分*/
-.ad-contents {
-  width: 100vw;
-  background-image: image-url('furima-header02.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-}
-
-.ad-title {
-  font-size: 5vh;
-  margin-bottom: 2vh;
-}
-
-.ad-explain {
-  font-size: 2.5vh;
-  line-height: 30px;
-}
-
-.store-btn {
-  display: flex;
-  margin-top: 24px;
-}
-
-.apple-btn {
-  margin-right: 1vw;
-  height: 9vh;
-}
-
-.google-btn {
-  height: 9vh;
-}
-
-/* //画面中央の「会員数日本一位」帯部分 */
-
-/* FURIMAの特徴 */
-.feature-contents {
-  padding: 5vh 15vw;
-}
-
-.feature-contents>.title {
-  text-align: center;
-  font-size: 3.5vh;
-  font-weight: bold;
-  margin-bottom: 5vh;
-  position: relative;
-}
-
-.feature-contents>.title::after {
-  content: '';
-  width: 70px;
-  height: 4px;
-  background-color: #3ccace;
+.slider .image{
   position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow-y: scroll; /* 縦方向にスクロール可能にする */
+  align-items: flex-end;
 }
 
-.feature-lists {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+/*
+  ①スライド画像
+  表示する画像を定義
+*/
+.slider .image:nth-of-type(1){
+  background-image: url(https://pixabay.com/get/gcb7f24b85cf33611a48e982eddcd3ffd4c48c60c899c8a7daa6bafafb8b6208e25782ec5dc0ca368e2695a2f5ea70d22a0babb4c62c2b7f00f62fcda997105b4_640.jpg);
 }
 
-.feature-lists>.list {
-  width: 33vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.slider .image:nth-of-type(2){
+  animation-delay: 5s;
+  background-image: url(https://images.unsplash.com/photo-1604321115296-f4b73745c7d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80);
+}.slider .image:nth-of-type(3){
+  animation-delay: 10s;
+  background-image: url(https://cdn.pixabay.com/photo/2016/10/22/20/34/wines-1761613_1280.jpg);
+}
+.slider .image:nth-of-type(4){
+  animation-delay: 15s;
+  background-image: url(https://cdn.pixabay.com/photo/2017/03/13/18/03/drinks-2140700_1280.jpg);
+}
+.slider .image:nth-of-type(5){
+  animation-delay: 20s;
+  background-image: url(https://images.unsplash.com/photo-1604321115296-f4b73745c7d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80);
+}
+.slider .image:nth-of-type(6){
+  animation-delay: 25s;
+  background-image: url(https://images.unsplash.com/photo-1595600566063-2863388012be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNTgwfDB8MXxzZWFyY2h8MjB8fGJlZXJ8ZW58MHx8fHwxNjgwMjYyTY3&ixlib=rb-4.0.3&q=80&w=400);
 }
 
-.feature-list-text {
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 50px;
+/*
+  ②アニメーション設定
+  animation-durationのみ変更
+*/
+.slider .image{
+  animation-name: anime;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-duration: 25s;  /* ①で設定したanimation-delayを合計を挿入 */
 }
 
-.feature-list-description {
-  font-size: 18px;
-  margin-top: 20px;
+/* アニメーション定義 */
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.18);
+  }
 }
-
-/* //FURIMAの特徴 */
 
 /* 商品一覧 */
 
 .item-contents {
-  background-color: #FFF;
+  position: absolute;
+  background-color:#552227;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10vh 0;
+  margin-top: 580px;
+  z-index: 21;
+
 }
 
 .item-contents>.title {
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
+  color: rgba(206, 183, 188, 0.668);
 }
 
 .item-contents>.subtitle {
   font-size: 3vh;
   margin: 1vh 0;
   text-decoration: none;
-  color: #3ccace;
+  color: #576181;
   font-weight: bold;
 }
 
@@ -242,12 +121,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: 21;
 }
 
 .item-lists>.list {
   width: 37vh;
   padding: 1vw;
-  background-color: #FFF;
+  background-color: #af828ac1;
+  opacity: 30;
 }
 
 
@@ -265,21 +146,22 @@ a {
   top: 40%;
   width: 100%;
   text-align: center;
-  background-color: crimson;
+  background-color: rgb(181, 48, 74);
   transform: skewY(-10deg);
 }
 
 .sold-out>span {
-  color: #FFF;
+  color: #e47f7f;
   font-size: 45px;
   font: bold;
 }
 
 
 .item-info {
-  background-color: #FFF;
-  color: black;
+  background-color: #f9f6f6;
+  color: rgb(174, 150, 150);
   padding: 1vw;
+  opacity: 30;
 }
 
 .item-name {
