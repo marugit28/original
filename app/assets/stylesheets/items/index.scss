@@ -45,21 +45,10 @@ a {
 .slider .image:nth-of-type(2){
   animation-delay: 5s;
   background-image: url(https://images.unsplash.com/photo-1604321115296-f4b73745c7d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80);
-}.slider .image:nth-of-type(3){
+}
+.slider .image:nth-of-type(3){
   animation-delay: 10s;
   background-image: url(https://cdn.pixabay.com/photo/2016/10/22/20/34/wines-1761613_1280.jpg);
-}
-.slider .image:nth-of-type(4){
-  animation-delay: 15s;
-  background-image: url(https://cdn.pixabay.com/photo/2017/03/13/18/03/drinks-2140700_1280.jpg);
-}
-.slider .image:nth-of-type(5){
-  animation-delay: 20s;
-  background-image: url(https://images.unsplash.com/photo-1604321115296-f4b73745c7d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80);
-}
-.slider .image:nth-of-type(6){
-  animation-delay: 25s;
-  background-image: url(https://images.unsplash.com/photo-1595600566063-2863388012be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNTgwfDB8MXxzZWFyY2h8MjB8fGJlZXJ8ZW58MHx8fHwxNjgwMjYyTY3&ixlib=rb-4.0.3&q=80&w=400);
 }
 
 /*
@@ -70,7 +59,7 @@ a {
   animation-name: anime;
   animation-delay: 0;
   animation-iteration-count: infinite;
-  animation-duration: 25s;  /* ①で設定したanimation-delayを合計を挿入 */
+  animation-duration: 15s;  /* ①で設定したanimation-delayを合計を挿入 */
 }
 
 /* アニメーション定義 */
@@ -98,7 +87,8 @@ a {
   padding: 10vh 0;
   margin-top: 580px;
   z-index: 21;
-
+  flex: 1;
+position: relative;
 }
 
 .item-contents>.title {
@@ -189,5 +179,14 @@ a {
 .star-count {
   font-size: 2vh;
 }
-
+.span.purchase-btn{
+  position:fixed;
+  right:50px;
+  bottom:50px;
+}
+.purchase-btn-text{
+  color: #e47f7f;
+  font-size: 30px;
+  text-align: center;
+}
 /* //商品一覧 */

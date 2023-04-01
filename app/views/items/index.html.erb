@@ -4,14 +4,17 @@
     <div class="image"></div>
     <div class="image"></div>
     <div class="image"></div> 
-    <div class="image"></div>
-    <div class="image"></div>
+
   </div>
   <div class='item-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
     <div class="subtitle" >
       新規投稿商品
     </div>
+<%= link_to(new_item_path, class: 'purchase-btn') do %>  
+  <span class='purchase-btn-text'>出品する</span>
+  <%= image_tag 'flag.png' , size: '185x50' ,class: "purchase-btn-icon" %> 
+<% end %>
     <ul class='item-lists'>
       <% @items.each do |item| %>
       <li class='list'>
@@ -39,6 +42,7 @@
         <% end %>
       </li>
       <% end %>
+
       <% if @items.length == 0 %>
       <li class='list'>
         <%= link_to items_path do %>
@@ -61,9 +65,4 @@
     </ul>
   </div>
 </div>
-<%= link_to(new_item_path, class: 'purchase-btn') do %>  
-  <span class='purchase-btn-text'>出品する</span>
-    <%# <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>  %>
-
-<% end %>
-<%= render "layouts/footer" %> 
+<%= render "layouts/second-footer" %> 

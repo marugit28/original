@@ -1,6 +1,9 @@
 
 .footer>p {
   font-size: 14px;
-  display: flex;
-  justify-content: center;
+  display: block;
+  bottom: 0; 
+  width:100vw;
+  height: 50px;
+  background-color: #1F1919;
 }
