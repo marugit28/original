@@ -1,6 +1,8 @@
-<%= render "layouts/header" %>
+<%= render "layouts/second-header" %>
 
 <div class="item-show">
+  <img class="hero-image" src="https://cdn.pixabay.com/photo/2015/06/27/16/34/wall-823611__480.jpg">
+
   <div class="item-box">
     <h2 class="name">
       <%= @item.itemname %>
@@ -15,7 +17,7 @@
     </div>
     <div class="item-price-box">
       <span class="item-price">
-        <%= @item.price %>
+        ¥<%= @item.price %>
       </span>
     </div>
     <% if user_signed_in? && !@item.orders.present? %> 
@@ -70,14 +72,10 @@
         <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
         <span>お気に入り 0</span>
       </div>
-      <div class="report-btn">
-        <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-        <span>不適切な商品の通報</span>
-      </div>
     </div>
   </div>
 
-<div id="comments">
+  <div id="comments">
   <h4>＜コメント一覧＞</h4>
     <% @item.comments.each do |comment| %>
       <div class="comment">
@@ -86,8 +84,8 @@
         <p><%= comment.text%></p>
       </div>
     <% end %>
-</div>
- <div class="comment-form">
+  </div>
+ <div class="comment-ran">
   <% if user_signed_in?  %>
     
     <%= form_with model: [@item, @comment], id: "comment-form" do |f| %>
@@ -101,15 +99,8 @@
     <% end %>
   <% end %>
 </div>
-  <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の商品
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの商品 ＞
-    </a>
-  </div>
+
   <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
 </div>
 
-<%= render "layouts/footer" %>
+<%= render "layouts/second-footer" %>

@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 10vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #1F1919;
+}
+
+/* .search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* 
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #3ccace;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
+} */
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-left {
+  display: flex;
+  min-width: 400px;
+  list-style: none;
+  justify-content: space-between;
+  color: #333333;
+}
+
+.category-list {
+  text-decoration: none;
+  color: #333333;
+}
+.region-list{
+  text-decoration: none;
+  color: #333333;
+}
+.atmosphere-list {
+  text-decoration: none;
+  color: #333333;
+}
+.degree-list{
+  text-decoration: none;
+  color: #333333;
+}
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}
+
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+/* スライダー画像 */
+.slider .image{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/*
+  ①スライド画像
+  表示する画像を定義
+*/
+.slider .image:nth-of-type(1){
+  background-image: url(https://pixabay.com/get/gcb7f24b85cf33611a48e982eddcd3ffd4c48c60c899c8a7daa6bafafb8b6208e25782ec5dc0ca368e2695a2f5ea70d22a0babb4c62c2b7f00f62fcda997105b4_640.jpg);
+}
+.slider .image:nth-of-type(2){
+  animation-delay: 5s;
+  background-image: url(https://pixabay.com/get/gad664e4436d48a5d5e4538b69aa8211998ee548b8751725d09e7ff55add861ce09b7f7952c83c43259422842e61c7175_640.jpg);
+}
+.slider .image:nth-of-type(3){
+  animation-delay: 10s;
+  background-image: url(https://images.unsplash.com/photo-1595600566063-2863388012be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNTgwfDB8MXxzZWFyY2h8MjB8fGJlZXJ8ZW58MHx8fHwxNjgwMjYyTY3&ixlib=rb-4.0.3&q=80&w=400);
+}
+
+/*
+  ②アニメーション設定
+  animation-durationのみ変更
+*/
+.slider .image{
+  animation-name: anime;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;  /* ①で設定したanimation-delayを合計を挿入 */
+}
+
+/* アニメーション定義 */
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.18);
+  }
+}

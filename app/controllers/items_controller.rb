@@ -63,7 +63,7 @@ def set_item
 end
 
 def item_order
-  if @item.order
+  if @item.orders
   redirect_to root_path
   end
 end
