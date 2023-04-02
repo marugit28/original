@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-  before_action :item_order, only: :edit
+  # before_action :item_order, only: :edit
 
 
   def index
@@ -29,7 +29,7 @@ class ItemsController < ApplicationController
     @comment = Comment.new
   end
 
-  def edit
+  def edit    
     unless user_signed_in? && current_user.id == @item.user_id
       redirect_to action: :index
     end

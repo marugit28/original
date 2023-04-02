@@ -13,7 +13,6 @@
     </div>
 <%= link_to(new_item_path, class: 'purchase-btn') do %>  
   <span class='purchase-btn-text'>出品する</span>
-  <%= image_tag 'flag.png' , size: '185x50' ,class: "purchase-btn-icon" %> 
 <% end %>
     <ul class='item-lists'>
       <% @items.each do |item| %>
@@ -33,9 +32,9 @@
           </h3>
           <div class='item-price'>
             <span><%= item.price %>円</span>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
+            <div class='heart-btn'>
+              <%= image_tag "heart-solid", class:"heart-solid" %>
+              <span class='heart-count'>0</span>
             </div>
           </div>
         </div>

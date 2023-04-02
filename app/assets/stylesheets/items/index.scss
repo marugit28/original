@@ -165,28 +165,25 @@ position: relative;
 }
 
 
-.star-btn {
+.heart-btn {
   display: flex;
   align-items: center;
 }
 
-.star-icon {
+.heart-icon {
   height: 2vh;
   width: 2vh;
   margin-right: 0.5vw;
 }
 
-.star-count {
+.heart-count {
   font-size: 2vh;
 }
-.span.purchase-btn{
-  position:fixed;
-  right:50px;
-  bottom:50px;
-}
+
 .purchase-btn-text{
   color: #e47f7f;
   font-size: 30px;
   text-align: center;
+  
 }
 /* //商品一覧 */
