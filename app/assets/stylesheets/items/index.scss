@@ -165,21 +165,18 @@ position: relative;
 }
 
 
-.heart-btn {
+.star-btn {
   display: flex;
   align-items: center;
 }
-.heart-solid{
-  height: 12px;
-  width :12px;
-}
-.heart-icon {
+
+.star-icon {
   height: 2vh;
   width: 2vh;
   margin-right: 0.5vw;
 }
 
-.heart-count {
+.star-count {
   font-size: 2vh;
 }
 
