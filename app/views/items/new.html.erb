@@ -1,8 +1,6 @@
 <header>
 <%= render "layouts/second-header" %> 
-     <%# <%= link_to purchase-btn "/" %>   
 
-  </header>
 <div class="items-sell-contents">
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
@@ -46,19 +44,11 @@
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-        
-      </div>
-    </div>
-
-    <div class="items-detail">
-      <div class="form">
        <div class="weight-bold-text">
-       配送について
-      <span class="indispensable">必須</span>
-      </div>
+         配送について
+        <span class="indispensable">必須</span>
+       </div>
        <%= f.collection_select(:scheduled_delivery_id, ScheduledDelivery.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
-      </div>
-      <div class="form">
         <div class="weight-bold-text">
           雰囲気
           <span class="indispensable">必須</span>
@@ -80,7 +70,6 @@
     <div class="sell-price">
       <div class="weight-bold-text question-text">
         <span>販売価格<br>(¥300〜9,999,999)</span>
-        <a class="question" href="#">？</a>
       </div>
       <div>
         <div class="price-content">
@@ -91,38 +80,15 @@
           <span class="sell-yen">¥</span>
           <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
         </div>
-        <div class="price-content">
-          <span>販売手数料 (10%)</span>
-          <span>
-            <span id='add-tax-price'></span>円
-          </span>
-        </div>
-        <div class="price-content">
-          <span>販売利益</span>
-          <span>
-            <span id='profit'></span>円
-          </span>
-        </div>
-      </div>
     </div>
 
-    <div class="caution">
-      <p class="sentence">
-        <a href="#">禁止されている出品、</a>
-        <a href="#">行為</a>
-        を必ずご確認ください。
-      </p>
-      <p class="sentence">
-        また、出品をもちまして
-        <a href="#">加盟店規約</a>
-        に同意したことになります。
-      </p>
-    </div>
+
     <div class="sell-btn-contents">
       <%= f.submit "出品する" , class:"sell-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
   </div>
   <% end %>
+</div>
 
-  <%= render "layouts/footer" %> 
+<%= render "layouts/footer" %> 

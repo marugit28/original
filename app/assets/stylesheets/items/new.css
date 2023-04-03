@@ -17,7 +17,7 @@
 }
 
 .items-sell-main {
-  background-color: #FFF;
+  background-color: #9A7C7A;
   width: 70vw;
   min-width: 450px;
   padding: 10vh 15vw;
@@ -42,7 +42,7 @@
 
 .weight-bold-text {
   font-weight: bold;
-  min-width: 170px;
+  min-width: 100px;
   margin-bottom: 10px;
 }
 
@@ -138,11 +138,12 @@
 
 .price-content {
   width: 300px;
-  border-bottom: 1px solid #ccc;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
+  border-top: 1px solid #ccc
 }
 
 .price-text {
