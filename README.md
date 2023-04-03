@@ -75,6 +75,19 @@ https://original-38923.onrender.com
     1.一覧ページやカテゴリ検索から商品をクリックして、お酒の詳細を確認する
     2.気に入ったものがあれば、会社のフォロー・お気に入り・コメントを投稿する
     3.購入できる  
+  
+  トップページから新規登録画面への遷移  
+https://gyazo.com/0d35a4e92f9d8101ef5b7c97432e053e  
+新規登録画面より登録  
+https://gyazo.com/1c7e413d28cb4dc2b7b4fbe97abbb4e2    
+商品出品  
+https://gyazo.com/f7b72f87f7a8a2e5c72c357fc3d09ce0  
+詳細画面から購入画面に遷移  
+https://gyazo.com/2ab90144950a0861578db9745d854934  
+商品購入  
+https://gyazo.com/4d0a1c1654fc58b9b35913161b24f5c4  
+エラーハンドリング  
+https://gyazo.com/e8ca510b7ecaf8409ae227f7954a1ab0  
 
 
 # 実装予定の機能
