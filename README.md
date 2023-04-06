@@ -87,7 +87,7 @@ https://gyazo.com/2ab90144950a0861578db9745d854934
 商品購入  
 https://gyazo.com/4d0a1c1654fc58b9b35913161b24f5c4  
 エラーハンドリング  
-https://gyazo.com/e8ca510b7ecaf8409ae227f7954a1ab0  
+https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGMwYmJlZDg0Njc0MjE0YmJlOGM1MTYyNzVkZTdlODA4MDZmNTlmNyZjdD1n/C52dUcSZ8pKupMb4h5/giphy.gif
 
 
 # 実装予定の機能
