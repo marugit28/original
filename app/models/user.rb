@@ -10,7 +10,8 @@ class User < ApplicationRecord
   has_many :items
   has_many :orders
   has_many :comments
-  
+  has_many :likes
+
   validates :nickname, presence: true
   validates :email,    presence: true
   validates :password, presence: true, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
