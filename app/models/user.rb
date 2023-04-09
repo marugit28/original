@@ -20,8 +20,6 @@ class User < ApplicationRecord
   validates :first_name_kana, presence: true, format: { with: /\A([ァ-ン]|ー)+\z/ }
   validates :birthday, presence: true
   validates :region_id,  numericality: { other_than: 1 , message: "can't be blank"}
-  # validates :company_name, presence: true
-  # validates :explanation, presence: true
-  
+
  
 end
