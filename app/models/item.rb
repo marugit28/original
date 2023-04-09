@@ -9,6 +9,7 @@ class Item < ApplicationRecord
   belongs_to :scheduled_delivery
   belongs_to :atmosphere
   belongs_to :user
+  belongs_to :company
   belongs_to :degree
   belongs_to :lank
 

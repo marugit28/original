@@ -6,8 +6,12 @@ class ApplicationController < ActionController::Base
   private
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up,
-                                      keys: [:nickname, :first_name, :last_name, :first_name_kana, :last_name_kana, :birthday, :region_id, :company_name, :explanation])
+                                      keys: [:nickname, :first_name, :last_name, :first_name_kana, :last_name_kana, :birthday, :region_id])
   end
+  # def configure_permitted_parameters
+  #   companies_parameter_sanitizer.permit(:sign_up,
+  #                                     keys: [:company_name, :region_id, :explanation])
+  # end
 
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|

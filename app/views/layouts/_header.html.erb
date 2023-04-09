@@ -25,9 +25,13 @@
 
       <% else%>
         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        <li><%= link_to '新規登録(法人)', "/companies/sign_up", class: "sign-up" %></li>
+        <li><%= link_to '新規登録（一般）', new_user_registration_path, class: "sign-up" %></li>
+
       <% end %>
-      <li>カテゴリー</li>
+      <li>カテゴリー
+        <%# <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %> 
+      </li>
       <li>雰囲気</li>
       <li>度数</li>
       <li>生産地</li>

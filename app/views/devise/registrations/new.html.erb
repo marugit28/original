@@ -9,7 +9,9 @@
   </div>
 
   <%= render 'orders/error_messages', model: f.object %>
-
+  <div class='register-btn'>
+    <b><%= link_to "法人の方はこちら", "/companies/sign_up" %></b>
+  </div>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">ニックネーム</label>
@@ -88,27 +90,12 @@
   </div>  
   <div class="form-group">
       <div class='form-text-wrap'>
-        <label class="form-text">会社名</label>
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.text_area :company_name, class:"input-default", id:"company", placeholder:"社名を入力してください", autofocus: true %>
-  </div>
-
-  <div class="form-group">
-      <div class='form-text-wrap'>
         <label class="form-text">居住地</label>
         <span class="indispensable">必須</span>
       </div>
      <%= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:"item-select"}) %>
   </div>
 
-  <div class="form-group">
-      <div class='form-text-wrap'>
-        <label class="form-text">会社説明</label>
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.text_area :explanation, class:"input-default", id:"explanation", placeholder:"会社説明", autofocus: true %>
-  </div>
     <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
   <div class="form-group">
     <h2 class='form-bottom-text'>
