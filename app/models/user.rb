@@ -22,5 +22,4 @@ class User < ApplicationRecord
   validates :birthday, presence: true
   validates :region_id,  numericality: { other_than: 1 , message: "can't be blank"}
 
- 
 end

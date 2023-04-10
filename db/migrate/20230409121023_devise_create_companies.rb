@@ -6,7 +6,7 @@ class DeviseCreateCompanies < ActiveRecord::Migration[6.0]
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.string :company_name,       null: false
+      t.string :company_name,       null: false, default: ""
       t.integer :region_id,         null: false
       t.text    :explanation,       null: false
       ## Recoverable
